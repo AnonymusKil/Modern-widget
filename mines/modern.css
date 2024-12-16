@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: black; /* Dark background for better contrast */
+}
+
+main {
+    display: flex;
+    background-color: #1e90ff; 
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.time-sides {
+    background-color: black;
+    padding: 1.8rem 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+.week-side {
+    background-color: black;
+    padding: 1.8rem 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: fadeIn 1s ease-out; 
+}
+
+p {
+    font-size: 1.5rem; /* Adjusted font size */
+    animation: bounceIn 0.5s ease-out; /* Bounce effect for each paragraph */
+}
+
+.time-sides p {
+    font-size: 2rem; /* Larger font size for time */
+    font-weight: bold;
+    animation: timeUpdate 1s ease-in-out; /* Smooth time update */
+}
+
+.week-side p {
+    font-size: 1.8rem; /* Slightly smaller font size for date */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes timeUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 1rem;
+    }
+
+    .time-sides, .week-side {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .time-sides p, .week-side p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+}
+}
